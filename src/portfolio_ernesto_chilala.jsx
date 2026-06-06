@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
+import logo from './assets/logo2.jpeg'
+
 const NAV_LINKS = ['Início', 'Sobre', 'Serviços', 'Projetos', 'Contacto']
 
 const SERVICES_MARBLE = [
@@ -316,6 +318,7 @@ const styles = `
   .hero-right {
     position: relative;
     overflow: hidden;
+    height: 680px;
   }
 
   .hero-right img {
@@ -441,6 +444,7 @@ const styles = `
     width: 100%;
     height: 520px;
     object-fit: cover;
+    object-position: center top;
     filter: grayscale(30%);
   }
 
@@ -877,10 +881,7 @@ export default function Portfolio() {
           <div className="hero-signature">Ernesto Chilala</div>
         </div>
         <div className="hero-right">
-          <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=85"
-            alt="Interior de mármore premium"
-          />
+          <img src={logo} alt="Interior de mármore premium" />
           <div className="hero-qualities">
             {QUALITIES.map((q) => (
               <div className="quality-pill" key={q.title}>
@@ -902,10 +903,7 @@ export default function Portfolio() {
         <div className="about-grid">
           <FadeUp>
             <div className="about-image-wrap">
-              <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=700&q=80"
-                alt="Trabalho em mármore"
-              />
+              <img src={logo} alt="Trabalho em mármore" />
             </div>
           </FadeUp>
           <FadeUp delay={120}>
